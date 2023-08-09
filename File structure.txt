@@ -1,0 +1,17 @@
+Folder PATH listing for volume New Volume
+Volume serial number is D682-15A4
+D:.
+¦   README.md
+¦   str.txt
+¦   
++---Dataset
+¦       hr_data.csv
+¦       
++---notebooks
+    ¦   Exploratory data analysis.ipynb
+    ¦   Model selection & building.ipynb
+    ¦   
+    +---.ipynb_checkpoints
+            Exploratory data analysis-checkpoint.ipynb
+            Model selection & building-checkpoint.ipynb
+            

@@ -1,0 +1,33 @@
+    
+    {% include "components/header.html" %}
+
+    <section class="body-font text-white bg-gray-900">
+        <div class="flex flex-wrap w-full pb-20 flex-col items-center text-center">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 title">Top news in the corporate industry</h1>
+            <p class="lg:w-1/2 w-full leading-relaxed text-opacity-80">News taken from a variety of sources</p>
+          </div>
+    </section>
+
+    {% for i in range(0,20,2) %}
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container py-12 mx-auto flex flex-wrap">
+          <div class="flex flex-wrap -m-4 mx-20">
+            
+            {% set source=data[i].source.name %}
+            {% set url=data[i].url %}
+            {% set content=(data[i].title +". " +data[i].content|string())[0:80]+"..." %}
+            {% include "components/card.html" %}
+            
+            {% set source=data[i+1].source.name %}
+            {% set url=data[i+1].url %}
+            {% set content=(data[i+1].title +". " +data[i+1].content|string())[0:80]+"..." %}
+            {% include "components/card.html" %}
+          </div>
+        </div>
+      </section>
+
+
+    {% endfor %}
+
+    {% include "components/end.html" %}

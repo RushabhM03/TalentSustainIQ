@@ -1,0 +1,102 @@
+{% include "components/header.html" %}
+
+<style>
+    #predictForm input{
+        background-color: lightgray;
+    }
+</style>
+
+<div class="bg-gray-900 text-white -my-8 px-4">
+    <div class="py-5 text-center">
+        <h2 class="text-2xl">Predict Employee Retention</h2><br>
+        <p class="lead">Below is an example form built to predict the HR Employee Retention in an Organization</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <h4 class="mb-3 text-xl text-semibold">Employee Details</h4>
+
+
+            <div id="result"></div>
+
+            <form id="predictForm" class="needs-validation">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="satisfaction_level" class="mb-2">Satisfaction Level</label>
+                        <input type="text" class="form-control ip-g" id="satisfaction_level" placeholder="" value=""
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="last_evaluation" class="mb-2">Last Evaluation</label>
+                        <input type="text" class="form-control" id="last_evaluation" placeholder="" value="" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="number_project" class="mb-2">Number Of Project</label>
+                        <input type="text" class="form-control" id="number_project" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="average_montly_hours" class="mb-2">Average Montly Hours</label>
+                        <input type="text" class="form-control" id="average_montly_hours" placeholder="" value=""
+                            required>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="time_spend_company" class="mb-2">Time Spend Company</label>
+                        <input type="text" class="form-control" id="time_spend_company" placeholder="" value=""
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="work_accident" class="mb-2">Work Accident</label>
+                        <input type="text" class="form-control" id="work_accident" placeholder="" value="" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="promotion_last_5years" class="mb-2">Promotion Last 5years</label>
+                        <input type="text" class="form-control" id="promotion_last_5years" placeholder="" value=""
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="salary" class="mb-2">Salary</label>
+                        <input type="text" class="form-control" id="salary" placeholder="" value="" required>
+                    </div>
+                </div>
+
+                <button class="text-white bg-green-500 border-0 my-8 py-2 focus:outline-none hover:bg-green-700 hover:text-white rounded text-lg w-full" type="submit">Submit</button>
+
+                <br><br>
+                <br>
+        <div class="alert alert-info text-center text-lg" role="alert">
+            <b>Appendix: </b><br>
+            <p> Output = 0 indicates that the employee is likely to stay at the organization</p>
+            
+            <p> Output = 1 indicates that the employee is likely to leave the organization</p>
+        </div>
+
+
+
+
+        </div>
+        <div class="col-md-2">
+        </div>
+        
+
+        </form>
+
+        
+
+    </div>
+</div class="mb-8">
+
+<script src="../static/js/form.js"></script>
+
+{% include "components/end.html" %}
