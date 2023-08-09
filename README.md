@@ -3,14 +3,14 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-This is an xgboost powered algorithm that takes several factors regrading the employment history of an employee and the outputs whether or not the employee is likely to stay at the company
+This is an xgboost-powered algorithm that takes several factors regarding the employment history of an employee and outputs whether or not the employee is likely to stay at the company
 
 ## 🎱 Problem statement
-Nowadays, employees are switching organizations at a rapid pace. The task is to build a machine learning model that can take various hr inputs and output whether or not the employee is likely to stay or not.TAking care of the needs of each and every employee is a challenging task for the HR department. This may result in talents leaving the company. 
+Nowadays, employees are switching organizations at a rapid pace. The task is to build a machine learning model that can take various hr inputs and output whether or not the employee is likely to stay or not. Taking care of the needs of each and every employee is a challenging task for the HR department. This may result in talents leaving the company. 
 
 ## 〽️ Phases 
 
-- Data exporation and visualization
+- Data exploration and visualization
 - Data preprocessing
 - Model Selection
 - Model building
@@ -92,55 +92,61 @@ Team members
 
 - [**R**ushabh Maru](https://github.com/RushabhM03) - rushabh.maru123@gmail.com
 
-Markdown is a lightweight markup language based on the formatting conventions
-that people naturally use in email.
-As [John Gruber] writes on the [Markdown site][df1]
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-This text you see here is *actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
-
 
 ## 🎯 Project setup
 
 Clone the project
 
 ```
-git clone 
+git clone https://github.com/RushabhM03/TalentSustainIQ.git
 ```
 
-```sh
-cd dillinger
-npm i
-node app
+Setup the Virtual environment
+(Run the commands in the base folder)
+```
+virtualenv venv
+cd venv/Scripts
+& "Activate.psl"
+cd.. cd ..
 ```
 
-For production environments...
-
-```sh
-npm install --production
-NODE_ENV=production node app
+Environment variables
+(Create a .env file)
+```
+NEWS_API_KEY="Your API key"
 ```
 
-## Plugins
+UI setup
+(Run the URL on the browser)
+```
+http://localhost:5000/
+```
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
+Training
+(Open Postman and run the API endpoint after having the correct data in the training_data folder)
+```
+http://0.0.0.0:5000/training
+```
 
-| Plugin | README |
+Testing/Batch prediction
+(Open Postman and run the API endpoint after having the correct data in the prediction_data folder)
+```
+http://0.0.0.0:5000/batchprediction
+```
+
+NOTE: After training u can use the form UI on the website to make predictions
+
+
+## API management
+
+Below is a list of important APIs
+
+| purpose | API |
 | ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+| training | http://0.0.0.0:5000/training |
+| batchprediction | http://0.0.0.0:5000/batchprediction |
+| Single prediction | http://0.0.0.0:5000/prediction |
+| API dashboard | https://localhost:5000/dashboard |
+
+> username and password for dashboard = "admin"
 
