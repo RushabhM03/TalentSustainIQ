@@ -15,6 +15,9 @@ app = Flask(__name__)
 dashboard.bind(app)
 CORS(app)
 
+UPLOAD_FOLDER = './data/training_data'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 @app.route('/', methods=['GET'])
 def homeRouteClient():
     return render_template('index.html')
@@ -45,7 +48,26 @@ def guidePage():
 def predictRouteClient():
     return render_template('predict.html')
 
+@app.route('/train_client', methods=['GET', 'POST'])
+def trainclient():
+    return render_template('train.html')
 
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    if not any(request.files):
+        return render_template('train.html', alertmsg="No part file")
+    
+    file = list(request.files.values())[0]
+    
+    if file.filename == '':
+        return render_template('train.html', alert_msg="No file selected")
+    
+    if file:
+        relative_path = 'data/training_data/' + file.filename  
+        file.save(relative_path)
+        return render_template('train.html', alertmsg="File uploaded successfully.")
+    
 @app.route('/training', methods=['POST'])
 @cross_origin()
 def training_route_client():

@@ -86,12 +86,13 @@ Here d-trees and xgboost models are created from parameters like:
 
 and the best model is selected from them
 
+<br>
 
-## 👩 Contributors
-Team members
+## 📜 Pre requisites
+* Have postman installed on your system
 
-- [**R**ushabh Maru](https://github.com/RushabhM03) - rushabh.maru123@gmail.com
 
+<br>
 
 ## 🎯 Project setup
 
@@ -137,7 +138,7 @@ http://0.0.0.0:5000/batchprediction
 NOTE: After training u can use the form UI on the website to make predictions
 
 
-## API management
+## 📡 API management
 
 Below is a list of important APIs
 
@@ -149,4 +150,9 @@ Below is a list of important APIs
 | API dashboard | https://localhost:5000/dashboard |
 
 > username and password for dashboard = "admin"
+<br>
 
+## 👩 Contributors
+Team members
+
+- [**R**ushabh Maru](https://github.com/RushabhM03) - rushabh.maru123@gmail.com
